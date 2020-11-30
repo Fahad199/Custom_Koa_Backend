@@ -1,0 +1,11 @@
+# package directories
+node_modules
+jspm_packages
+
+# IDE directories
+.vscode
+!.vscode/settings.json
+.idea
+.env
+
+uploads/
