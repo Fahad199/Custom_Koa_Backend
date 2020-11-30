@@ -4,12 +4,12 @@ const sequelize = require('./src/helpers/dbConnection');
 
 sequelize.sync().then(() => {
   app.listen(process.env.PORT, async () => {
-    console.log(`started listening on port ${process.env.PORT}`);
+    console.log(`server listening on port ${process.env.PORT}`);
     try {
       await sequelize.authenticate();
       console.log('Database successfully connected!');
     } catch (err) {
-      console.error('unable to connect', err);
+      console.error('failed to connect', err);
     }
   });
 });
